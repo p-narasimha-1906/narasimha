@@ -1,0 +1,36 @@
+try:
+    a=int(input("enter number:"))
+    b=int(input("enter number:"))
+    def plus(a,b):
+        x=a+b
+        print("addition of two values is:",x)
+    plus(a,b)
+    def minus(a,b):
+        x=a-b
+        print("substraction of two values is:",x)
+    minus(a,b)
+    def multiply(a,b):
+        x=a*b
+        print("multiplication of two values is:",x)
+    multiply(a,b)
+    def divide(a,b):
+        x=a//b
+        print("divide of two values is:",x)
+    divide(a,b)
+except:
+    print("only numbers allowed")
+    
+    
+    
+    
+    output:
+enter number:9
+enter number:3
+addition of two values is: 12
+substraction of two values is: 6
+multiplication of two values is: 27
+divide of two values is: 3
+
+///
+enter number:"uday"
+only numbers allowed
