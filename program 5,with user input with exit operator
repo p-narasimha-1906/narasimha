@@ -1,0 +1,60 @@
+calculation=0
+while True:
+    operator = input("Give me an operator: ")
+    if operator  in [ "+","-","/","*"]:
+        calculation+=1
+        try:
+            a= int(input("Enter a number: "))
+            b = int(input("Enter a number: "))
+            def plus(a, b):
+                x = a + b
+                print("addition of two values is:", x)
+            plus(a, b)
+            def minus(a, b):
+                x = a - b
+                print("substraction of two values is:", x)
+            minus(a, b)
+            def multiply(a, b):
+                x = a * b
+                print("multiplication of two values is:", x)
+            multiply(a, b)
+            def divide(a, b):
+                x = a // b
+                print("divide of two values is:", x)
+            divide(a, b)
+        except ValueError:
+            print("Please enter an integer")
+    elif operator == "exit":
+        print("***number of calculations:", calculation)
+        break
+    elif operator=="":
+        print("type operator")
+    else:
+        pass
+        
+        
+        
+        
+OUTPUT:
+
+
+Give me an operator: +
+Enter a number: 4
+Enter a number: 5
+addition of two values is: 9
+substraction of two values is: -1
+multiplication of two values is: 20
+divide of two values is: 0
+Give me an operator: -
+Enter a number: 4
+Enter a number: 5
+addition of two values is: 9
+substraction of two values is: -1
+multiplication of two values is: 20
+divide of two values is: 0
+Give me an operator: 
+type operator
+Give me an operator: exit
+***number of calculations: 2
+
+        
