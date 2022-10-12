@@ -1,0 +1,47 @@
+#######YOUNGEST EMPLOYEE#####
+
+
+employee=[{"name":"tina","age":10,"birthday":1990-3-10,"job":"Devops Engeneer"},{"name":"tim","age":80,"birthday":1985-2-21,"job":"devoloper","address":"palamaner"},{"name":"narasimhulu","age":60}]
+o=len(employee)
+def youngest(employee):
+    age=employee[0]["age"]
+    for i in range(o):
+        if(employee[i]["age"])<age:
+            age=employee[i]["age"]
+    print("AGE:",age)
+    for j in range(o):
+        if (employee[j]["age"]==age):
+            print("youngest employee name:", employee[j]["name"])
+            print("youngest employee age:", employee[j]["age"])
+youngest(employee)
+
+......OUTPUT:.......
+
+AGE: 10
+youngest employee name: tim
+youngest employee age: 10
+
+
+
+######ELDER#####
+
+employee=[{"name":"tina","age":70,"birthday":1990-3-10,"job":"Devops Engeneer"},{"name":"tim","age":80,"birthday":1985-2-21,"job":"devoloper","address":"palamaner"},{"name":"narasimhulu","age":60}]
+o=len(employee)
+def youngest(employee):
+    age=0
+    for i in range(o):
+        if(employee[i]["age"])>age:
+            age=employee[i]["age"]
+    print("AGE:",age)
+    for j in range(o):
+        if (employee[j]["age"]==age):
+            print("ELDER employee name:", employee[j]["name"])
+            print("ELDER employee age:", employee[j]["age"])
+youngest(employee)
+
+
+.......OUTPUT:.......
+AGE:80
+ELDER employee name: tim
+ELDER employee age: 80
+
