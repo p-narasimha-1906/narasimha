@@ -1,0 +1,30 @@
+employee=[{"name":"tina","age":30,"birthday":1990-3-10,"job":"Devops Engeneer","address":{"city":"new york","country":"usa"}},{"name":"tim","age":35,"birthday":1985-2-21,"job":"devoloper","address":{"city":"sydney","country":"australiya"}},{"name":"tina"}]
+for i in employee:
+    for j in i:
+
+        if j=="name":
+            print(j,"=",i[j])
+        elif j=="job":
+            print(j, "=", i[j])
+        elif j=="city":
+            print(j, "=", i[j])
+        elif j=="address":
+            for p in i[j]:
+                if p=="city":
+                    print(p,"=",i[j][p])
+        else:
+            pass
+print(employee[1]["address"]["country"])
+
+
+
+OUTPUT:
+
+name = tina
+job = Devops Engeneer
+city = new york
+name = tim
+job = devoloper
+city = sydney
+name = tina
+australiya
