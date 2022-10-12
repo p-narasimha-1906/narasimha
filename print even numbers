@@ -1,0 +1,17 @@
+l=list(map(int,input("enter numbers:").split()))
+def list(l):
+    for i in l:
+        if i%2==0:
+            print(i)
+list(l)
+
+
+...OUTPUT....
+enter numbers:12 32 1 34 3 45 67 56 3 8 56
+[12, 32, 1, 34, 3, 45, 67, 56, 3, 8, 56]
+12
+32
+34
+56
+8
+56
