@@ -1,0 +1,10 @@
+employee = {"name": "tim", "age": 30, "birthday": "1990-03-10", "job": "Devops Engineer"}
+del employee["age"]
+for j in employee:
+    print(j,":",employee[j])
+    
+    
+    OUTPUT:
+name : tim
+birthday : 1990-03-10
+job : Devops Engineer
