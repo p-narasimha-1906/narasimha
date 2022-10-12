@@ -1,0 +1,19 @@
+my_list=[1,2,2,4,4,5,6,8,10,13,22,35,52,83]
+m=[]
+for  j in my_list:
+    if j>=10:
+        m.append(j)
+print(m)
+k=[]
+n=int(input("enter the number:"))
+for l in my_list:
+    if l>n:
+        k.append(l)
+print(k)
+
+
+OUTPUT:
+[10, 13, 22, 35, 52, 83]
+enter the number:12
+[13, 22, 35, 52, 83]
+Footer
