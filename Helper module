@@ -1,0 +1,60 @@
+.....main.py.....
+
+import python as p
+employee=[{"name":"tina","age":70,"birthday":1990-3-10,"job":"Devops Engeneer"},{"name":"tim","age":10,"birthday":1985-2-21,"job":"devoloper","address":"palamaner"},{"name":"narasimhulu","age":60}]
+p.youngest(employee)
+s=input("enter string:")
+s=s.replace(" ","")
+print(s)
+p.string(s)
+l=list(map(int,input("enter numbers:").split()))
+print(l)
+p.list(l)
+
+
+......output.........
+
+AGE: 10
+youngest employee name: tim
+youngest employee age: 10
+enter string:ffddfghhhggfgh
+ffddfghhhggfgh
+uppercaseletters: 0
+lowercaseletters: 14
+enter numbers:5 6 7 8 4 5 6 7 
+[5, 6, 7, 8, 4, 5, 6, 7]
+6
+8
+4
+6
+
+
+
+......python.py......
+
+def youngest(a):
+    age=employee[0]["age"]
+    for i in range(o):
+         #employee[0]["age"]
+        if(employee[i]["age"])<age:
+            age=employee[i]["age"]
+    print("AGE:",age)
+    for j in range(o):
+        if (employee[j]["age"]==age):
+            print("youngest employee name:", employee[j]["name"])
+            print("youngest employee age:", employee[j]["age"])
+def string(s):
+    uppercaseletters=0
+    lowercaseletters=0
+    for i in s:
+        if i.isupper():
+            uppercaseletters+=1
+        elif i.islower():
+            lowercaseletters+=1
+    print("uppercaseletters:", uppercaseletters)
+    print("lowercaseletters:", lowercaseletters)
+
+def list(l):
+    for i in l:
+        if i%2==0:
+            print(i)
