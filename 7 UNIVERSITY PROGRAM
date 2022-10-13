@@ -84,4 +84,48 @@ professor last name: tti
 professor age: 56
 subjects he/she attends: science
 
+c) Create a Lecture class
+---------------------------
+
+class lecture:
+    def lecturedata(self,n,m,d,l):
+        self.n=n
+        self.m=m
+        self.d=d
+        self.l=l
+    def display(self):
+        print("lecture name:", self.n)
+        print("max number of students:", self.m)
+        print("duration time:", self.d)
+        print("list of professors giving this lectures:", self.l)
+s=lecture()
+for i in range(2):
+    lecturename=input("lecture name:",)
+    maxnumberofstudents=int(input("max number of students:", ))
+    duration=(input("duration time:",))
+    listofprofessors=input("list of professors giving this lectures:",)
+    s.lecturedata(lecturename,maxnumberofstudents,duration,listofprofessors)
+    s.display()
+    
+    
+    .......OUTPUT.......
+    
+ lecture name:math
+max number of students:67
+duration time:3 m
+list of professors giving this lectures:6767
+lecture name: math
+max number of students: 67
+duration time: 3 m
+list of professors giving this lectures: 6767
+lecture name:science
+max number of students:78
+duration time:4 m
+list of professors giving this lectures:56
+lecture name: science
+max number of students: 78
+duration time: 4 m
+list of professors giving this lectures: 56
+
+
 
