@@ -1,0 +1,33 @@
+from random import *
+guess=1
+number=randint(1,9)
+print("number:",number)
+userguess=int(input("please guess number:"))
+while userguess!=number:
+    if userguess<number:
+        print("user guessing number is too low")
+        userguess=int(input("please guess again:"))
+        guess=guess+1
+    elif userguess>number:
+        print("user guessing number is too high")
+        userguess = int(input("please guess again:"))
+        guess = guess + 1
+print("YOU WON!",guess,"th time")
+
+
+
+...OUTPUT....
+
+number: 8
+please guess number:67
+user guessing number is too high
+please guess again:2
+user guessing number is too low
+please guess again:89
+user guessing number is too high
+please guess again:56
+user guessing number is too high
+please guess again:23
+user guessing number is too high
+please guess again:8
+YOU WON! 6 th time
