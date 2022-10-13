@@ -1,0 +1,43 @@
+a) Create a Student class
+----------------------------
+class student:
+    def studentdata(self,f,l,a,la):
+        self.f=f
+        self.l=l
+        self.a=a
+        self.la=la
+    def display(self):
+        print("first name:", self.f)
+        print("last name:", self.l)
+        print("student age:", self.a)
+        print("lectures he/she attends:", self.la)
+s=student()
+for i in range(2):
+    firstname=input("enter first name:",)
+    lastname = input("enter last name:", )
+    age=int(input("enter age:",))
+    lectures=input("enter lectures he/she attends:",)
+    s.studentdata(firstname, lastname,age,lectures)
+    s.display()
+
+  
+  
+  
+  .....OUTPUT......
+  
+enter first name:ramu
+enter last name:uu
+enter age:67
+enter lectures he/she attends:science
+first name: ramu
+last name: uu
+student age: 67
+lectures he/she attends: science
+enter first name:sita
+enter last name:uy
+enter age:67
+enter lectures he/she attends:math
+first name: sita
+last name: uy
+student age: 67
+lectures he/she attends: math
