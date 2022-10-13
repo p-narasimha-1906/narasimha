@@ -41,3 +41,47 @@ first name: sita
 last name: uy
 student age: 67
 lectures he/she attends: math
+
+
+b) Create a Professor class
+----------------------------
+class professor:
+    def professordata(self,f,l,a,s):
+        self.f=f
+        self.l=l
+        self.a=a
+        self.s=s
+    def display(self):
+        print("professor first name:", self.f)
+        print("professor last name:", self.l)
+        print("professor age:", self.a)
+        print("subjects he/she attends:", self.s)
+s=professor()
+for i in range(2):
+    firstname=input("enter first name:",)
+    lastname = input("enter last name:", )
+    age=int(input("enter age:",))
+    subjects=input("enter subjects he/she teaches:",)
+    s.professordata(firstname, lastname,age,subjects)
+    s.display()
+
+
+.....OUTPUT.....
+enter first name:ram
+enter last name:nai
+enter age:87
+enter subjects he/she teaches:math
+professor first name: ram
+professor last name: nai
+professor age: 87
+subjects he/she attends: math
+enter first name:sita
+enter last name:tti
+enter age:56
+enter subjects he/she teaches:science
+professor first name: sita
+professor last name: tti
+professor age: 56
+subjects he/she attends: science
+
+
