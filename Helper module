@@ -2,6 +2,7 @@
 
 import python as p
 employee=[{"name":"tina","age":70,"birthday":1990-3-10,"job":"Devops Engeneer"},{"name":"tim","age":10,"birthday":1985-2-21,"job":"devoloper","address":"palamaner"},{"name":"narasimhulu","age":60}]
+o=len(employee)
 p.youngest(employee)
 s=input("enter string:")
 s=s.replace(" ","")
