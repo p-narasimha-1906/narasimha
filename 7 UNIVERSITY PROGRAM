@@ -10,11 +10,14 @@ class student:
         print("full name:", self.f,"", self.l)
         print("student age:", self.a)
         print("lectures he/she attends:", self.la)
-        add=input("add new lectures to the lecters list:")
-        (self.la).append(add)
+        add=list(map(str,input("add new lectures to the lecters list:").split()))
+        for i in add:
+            (self.la).append(i)
         print(self.la)
-        rem = input("remove lectures from lecters list:")
-        (self.la).remove(rem)
+        rem =list(map(str,input("remove lectures from lecters list:").split()))
+        for j in rem:
+            if j in self.la:
+                (self.la).remove(j)
         print(self.la)
 s=student()
 n=int(input("enter number of students:"))
@@ -39,9 +42,9 @@ enter lectures:math science
 full name: kata  bharath
 student age: 23
 lectures he/she attends: ['math', 'science']
-add new lectures to the lecters list:computers
-['math', 'science', 'computers']
-remove lectures from lecters list:science
+add new lectures to the lecters list:computers telugu
+['math', 'science', 'computers','telugu']
+remove lectures from lecters list:science telugu
 ['math', 'computers']
 enter first name:mordana
 enter last name:kesav
@@ -68,10 +71,14 @@ class professor:
         print("professor first name:", self.f,"",self.l)
         print("professor age:", self.a)
         print("subjects he/she attends:", self.s)
-        add = input("add new subjects to the subjects list:")
-        (self.s).append(add)
-        rem = input("remove remove from subjects list:")
-        (self.s).remove(rem)
+        add = list(map(str,input("add new subjects to the subjects list:").split()))
+        for i in add:
+            (self.s).append(i)
+        rem = list(map(str,input("remove remove from subjects list:").split()))
+        for k in rem:
+            if k in self.s:
+                (self.s).remove(k)
+        
         print(self.s)
 m=professor()
 n=int(input("enter number of professors:"))
@@ -94,9 +101,9 @@ enter subjects he/she teaches:math computers
 professor first name: mani  m
 professor age: 56
 subjects he/she attends: ['math', 'computers']
-add new subjects to the subjects list:telugu
-remove remove from subjects list:math
-['computers', 'telugu']
+add new subjects to the subjects list:telugu hindhi
+remove remove from subjects list:math computers
+['telugu','hindhi']
 
 
 c) Create a Lecture class
