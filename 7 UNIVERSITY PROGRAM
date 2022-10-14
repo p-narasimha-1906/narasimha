@@ -65,37 +65,39 @@ class professor:
         self.a=a
         self.s=s
     def display(self):
-        print("professor first name:", self.f)
-        print("professor last name:", self.l)
+        print("professor first name:", self.f,"",self.l)
         print("professor age:", self.a)
         print("subjects he/she attends:", self.s)
-s=professor()
-for i in range(2):
+        add = input("add new subjects to the subjects list:")
+        (self.s).append(add)
+        rem = input("remove remove from subjects list:")
+        (self.s).remove(rem)
+        print(self.s)
+m=professor()
+n=int(input("enter number of professors:"))
+count=1
+while count<n:
+    count+=1
     firstname=input("enter first name:",)
     lastname = input("enter last name:", )
     age=int(input("enter age:",))
-    subjects=input("enter subjects he/she teaches:",)
-    s.professordata(firstname, lastname,age,subjects)
-    s.display()
-
+    subjects=list(map(str,input("enter subjects he/she teaches:",).split()))
+    m.professordata(firstname,lastname,age,subjects)
+    m.display()
 
 .....OUTPUT.....
-enter first name:ram
-enter last name:nai
-enter age:87
-enter subjects he/she teaches:math
-professor first name: ram
-professor last name: nai
-professor age: 87
-subjects he/she attends: math
-enter first name:sita
-enter last name:tti
+enter number of professors:2
+enter first name:mani
+enter last name:m
 enter age:56
-enter subjects he/she teaches:science
-professor first name: sita
-professor last name: tti
+enter subjects he/she teaches:math computers
+professor first name: mani  m
 professor age: 56
-subjects he/she attends: science
+subjects he/she attends: ['math', 'computers']
+add new subjects to the subjects list:telugu
+remove remove from subjects list:math
+['computers', 'telugu']
+
 
 c) Create a Lecture class
 ---------------------------
@@ -108,37 +110,39 @@ class lecture:
         self.l=l
     def display(self):
         print("lecture name:", self.n)
-        print("max number of students:", self.m)
         print("duration time:", self.d)
         print("list of professors giving this lectures:", self.l)
+        add = list(map(str,input("add professor giving this lecture:").split()))
+        for i in add:
+            (self.l).append(i)
+        print(self.l)
+
 s=lecture()
-for i in range(2):
+n=int(input("enter number of lectures:"))
+count=1
+while count<n:
+    count+=1
     lecturename=input("lecture name:",)
     maxnumberofstudents=int(input("max number of students:", ))
     duration=(input("duration time:",))
-    listofprofessors=input("list of professors giving this lectures:",)
+    listofprofessors=list(map(str,input("list of professors giving this lectures:",).split()))
     s.lecturedata(lecturename,maxnumberofstudents,duration,listofprofessors)
     s.display()
+
     
     
     .......OUTPUT.......
     
- lecture name:math
+ enter number of lectures:2
+lecture name:math
 max number of students:67
-duration time:3 m
-list of professors giving this lectures:6767
+duration time:9 months
+list of professors giving this lectures:mani nani hari
 lecture name: math
-max number of students: 67
-duration time: 3 m
-list of professors giving this lectures: 6767
-lecture name:science
-max number of students:78
-duration time:4 m
-list of professors giving this lectures:56
-lecture name: science
-max number of students: 78
-duration time: 4 m
-list of professors giving this lectures: 56
+duration time: 9 months
+list of professors giving this lectures: ['mani', 'nani', 'hari']
+add professor giving this lecture:sreeksnth narasimha
+['mani', 'nani', 'hari', 'sreeksnth', 'narasimha']
 
 
 
