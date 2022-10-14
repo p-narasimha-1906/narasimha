@@ -7,40 +7,53 @@ class student:
         self.a=a
         self.la=la
     def display(self):
-        print("first name:", self.f)
-        print("last name:", self.l)
+        print("full name:", self.f,"", self.l)
         print("student age:", self.a)
         print("lectures he/she attends:", self.la)
+        add=input("add new lectures to the lecters list:")
+        (self.la).append(add)
+        print(self.la)
+        rem = input("remove lectures from lecters list:")
+        (self.la).remove(rem)
+        print(self.la)
 s=student()
-for i in range(2):
+n=int(input("enter number of students:"))
+count=1
+while count<n:
+    count+=1
     firstname=input("enter first name:",)
     lastname = input("enter last name:", )
     age=int(input("enter age:",))
-    lectures=input("enter lectures he/she attends:",)
+    lectures=list(map(str,input("enter lectures:",).split()))
     s.studentdata(firstname, lastname,age,lectures)
     s.display()
 
   
-  
-  
   .....OUTPUT......
   
-enter first name:ramu
-enter last name:uu
-enter age:67
-enter lectures he/she attends:science
-first name: ramu
-last name: uu
-student age: 67
-lectures he/she attends: science
-enter first name:sita
-enter last name:uy
-enter age:67
-enter lectures he/she attends:math
-first name: sita
-last name: uy
-student age: 67
-lectures he/she attends: math
+enter number of students:3
+enter first name:kata
+enter last name:bharath
+enter age:23
+enter lectures:math science
+full name: kata  bharath
+student age: 23
+lectures he/she attends: ['math', 'science']
+add new lectures to the lecters list:computers
+['math', 'science', 'computers']
+remove lectures from lecters list:science
+['math', 'computers']
+enter first name:mordana
+enter last name:kesav
+enter age:23
+enter lectures:math telugu science
+full name: mordana  kesav
+student age: 23
+lectures he/she attends: ['math', 'telugu', 'science']
+add new lectures to the lecters list:computers
+['math', 'telugu', 'science', 'computers']
+remove lectures from lecters list:telugu
+['math', 'science', 'computers']
 
 
 b) Create a Professor class
