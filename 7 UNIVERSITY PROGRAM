@@ -1,5 +1,5 @@
 a) Create a Student class
-----------------------------
+-----------------------------------------------------------------------------------------------------------------
 class student:
     def studentdata(self,f,l,a,la):
         self.f=f
@@ -57,7 +57,7 @@ remove lectures from lecters list:telugu
 
 
 b) Create a Professor class
-----------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
 class professor:
     def professordata(self,f,l,a,s):
         self.f=f
@@ -100,7 +100,7 @@ remove remove from subjects list:math
 
 
 c) Create a Lecture class
----------------------------
+---------------------------------------------------------------------------------------------------------------------------
 
 class lecture:
     def lecturedata(self,n,m,d,l):
@@ -145,4 +145,51 @@ add professor giving this lecture:sreeksnth narasimha
 ['mani', 'nani', 'hari', 'sreeksnth', 'narasimha']
 
 
+
+d.INHERITENCE
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+class student:
+    def data(self,f,l,a):
+        self.f=f
+        self.l=l
+        self.a=a
+    def print_name(self):
+        print("full name:", self.f,"", self.l)
+s=student()
+n=int(input("enter number of students:"))
+count=1
+while count<n:
+    count+=1
+    firstname=input("enter first name:",)
+    lastname = input("enter last name:", )
+    age=int(input("enter age:",))
+    s.data(firstname, lastname,age)
+    s.print_name()
+class professor(student):
+    pass
+p=professor()
+n=int(input("enter number of professors:"))
+count=1
+while count<n:
+    count+=1
+    firstname=input("enter first name:",)
+    lastname = input("enter last name:", )
+    age=int(input("enter age:",))
+    s.data(firstname, lastname,age)
+    s.print_name()
+
+......OUTPUT.........
+
+enter number of students:2
+enter first name:mani
+enter last name:m
+enter age:32
+full name: mani  m
+enter number of professors:2
+enter first name:n
+enter last name:muralimohan
+enter age:49
+full name: n  muralimohan
 
