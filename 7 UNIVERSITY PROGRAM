@@ -1,109 +1,112 @@
 a) Create a Student class
 -----------------------------------------------------------------------------------------------------------------
 class student:
-    def studentdata(self,f,l,a,la):
-        self.f=f
-        self.l=l
-        self.a=a
-        self.la=la
+    def studentdata(self, f, l, a, la):
+        self.f = f
+        self.l = l
+        self.a = a
+        self.la = la
+
     def display(self):
-        print("full name:", self.f,self.l)
+        print("full name:", self.f, self.l)
         print("student age:", self.a)
         print("lectures he/she attends:", self.la)
-        add=list(map(str,input("add new lectures to the lecters list:").split()))
+        add = list(map(str, input("add new lectures to the lecters list:").split()))
         for i in add:
             (self.la).append(i)
         print(self.la)
-        rem =list(map(str,input("remove lectures from lecters list:").split()))
+        rem = list(map(str, input("remove lectures from lecters list:").split()))
         for j in rem:
             if j in self.la:
                 (self.la).remove(j)
         print(self.la)
-s=student()
-n=int(input("enter number of students:"))
-count=1
-while count<n:
-    count+=1
-    firstname=input("enter first name:",)
-    lastname = input("enter last name:", )
-    age=int(input("enter age:",))
-    lectures=list(map(str,input("enter lectures:",).split()))
-    s.studentdata(firstname, lastname,age,lectures)
-    s.display()
+s = student()
+while True:
+    n=input("Do you want to continue to store student information YES or NO:")
+    if n=="YES":
+        firstname = input("enter first name:", )
+        lastname = input("enter last name:", )
+        age = int(input("enter age:", ))
+        lectures = list(map(str, input("enter lectures:", ).split()))
+        s.studentdata(firstname, lastname, age, lectures)
+        s.display()
+    elif n=="NO":
+        break
 
-  
   .....OUTPUT......
   
-enter number of students:3
-enter first name:kata
-enter last name:bharath
-enter age:23
-enter lectures:math science
-full name: kata bharath
-student age: 23
-lectures he/she attends: ['math', 'science']
-add new lectures to the lecters list:computers telugu
-['math', 'science', 'computers','telugu']
-remove lectures from lecters list:science telugu
-['math', 'computers']
-enter first name:mordana
-enter last name:kesav
-enter age:23
-enter lectures:math telugu science
-full name: mordana  kesav
-student age: 23
-lectures he/she attends: ['math', 'telugu', 'science']
-add new lectures to the lecters list:computers
-['math', 'telugu', 'science', 'computers']
+Do you want to continue to store student information YES or NO:YES
+enter first name:mani
+enter last name:n
+enter age:34
+enter lectures:maths science
+full name: mani n
+student age: 34
+lectures he/she attends: ['maths', 'science']
+add new lectures to the lecters list:telugu
+['maths', 'science', 'telugu']
 remove lectures from lecters list:telugu
-['math', 'science', 'computers']
+['maths', 'science']
+Do you want to continue to store student information YES or NO:NO
+
+Process finished with exit code 0
 
 
 b) Create a Professor class
 ---------------------------------------------------------------------------------------------------------------------------------------------
 class professor:
-    def professordata(self,f,l,a,s):
-        self.f=f
-        self.l=l
-        self.a=a
-        self.s=s
+    def professordata(self, f, l, a, s):
+        self.f = f
+        self.l = l
+        self.a = a
+        self.s = s
+
     def display(self):
-        print("professor first name:", self.f,self.l)
+        print("professor first name:", self.f, self.l)
         print("professor age:", self.a)
         print("subjects he/she attends:", self.s)
-        add = list(map(str,input("add new subjects to the subjects list:").split()))
+        add = list(map(str, input("add new subjects to the subjects list:").split()))
         for i in add:
             (self.s).append(i)
-        rem = list(map(str,input("remove remove from subjects list:").split()))
+        rem = list(map(str, input("remove remove from subjects list:").split()))
         for k in rem:
             if k in self.s:
                 (self.s).remove(k)
-        
+
         print(self.s)
-m=professor()
-n=int(input("enter number of professors:"))
-count=1
-while count<n:
-    count+=1
-    firstname=input("enter first name:",)
-    lastname = input("enter last name:", )
-    age=int(input("enter age:",))
-    subjects=list(map(str,input("enter subjects he/she teaches:",).split()))
-    m.professordata(firstname,lastname,age,subjects)
-    m.display()
+
+
+m = professor()
+
+while True:
+    n = input("Do you want to continue to store professor information YES or NO:")
+    if n == "YES":
+        firstname = input("enter first name:", )
+        lastname = input("enter last name:", )
+        age = int(input("enter age:", ))
+        subjects = list(map(str, input("enter subjects he/she teaches:", ).split()))
+        m.professordata(firstname, lastname, age, subjects)
+        m.display()
+    elif n=="NO":
+        break
+
 
 .....OUTPUT.....
-enter number of professors:2
-enter first name:mani
-enter last name:muta
+Do you want to continue to store professor information YES or NO:YES
+enter first name:MUNI
+enter last name:MURALIMOHAN
 enter age:56
-enter subjects he/she teaches:math computers
-professor first name: mani muta
+enter subjects he/she teaches:MATHS SCIENCE
+professor first name: MUNI MURALIMOHAN
 professor age: 56
-subjects he/she attends: ['math', 'computers']
-add new subjects to the subjects list:telugu hindhi
-remove remove from subjects list:math computers
-['telugu','hindhi']
+subjects he/she attends: ['MATHS', 'SCIENCE']
+add new subjects to the subjects list:COMPUTERS
+remove remove from subjects list:SCIENCE
+['MATHS', 'COMPUTERS']
+Do you want to continue to store professor information YES or NO:NO
+
+Process finished with exit code 0
+
 
 
 c) Create a Lecture class
@@ -125,31 +128,37 @@ class lecture:
         print(self.l)
 
 s=lecture()
-n=int(input("enter number of lectures:"))
-count=1
-while count<n:
-    count+=1
-    lecturename=input("lecture name:",)
-    maxnumberofstudents=int(input("max number of students:", ))
-    duration=(input("duration time:",))
-    listofprofessors=list(map(str,input("list of professors giving this lectures:",).split()))
-    s.lecturedata(lecturename,maxnumberofstudents,duration,listofprofessors)
-    s.display()
+while True:
+    n = input("Do you want to continue to store lecture information YES or NO:")
+    if n == "YES":
+        lecturename=input("lecture name:",)
+        maxnumberofstudents=int(input("max number of students:", ))
+        duration=(input("duration time:",))
+        listofprofessors=list(map(str,input("list of professors giving this lectures:",).split()))
+        s.lecturedata(lecturename,maxnumberofstudents,duration,listofprofessors)
+        s.display()
+    elif n=="NO":
+        break
+
 
     
     
     .......OUTPUT.......
     
- enter number of lectures:2
-lecture name:math
-max number of students:67
-duration time:9 months
-list of professors giving this lectures:mani nani hari
-lecture name: math
-duration time: 9 months
-list of professors giving this lectures: ['mani', 'nani', 'hari']
-add professor giving this lecture:sreeksnth narasimha
-['mani', 'nani', 'hari', 'sreeksnth', 'narasimha']
+Do you want to continue to store lecture information YES or NO:YES
+lecture name:MATHS
+max number of students:34
+duration time:3 MONTHS
+list of professors giving this lectures:MANOHAR NARAYAN
+lecture name: MATHS
+duration time: 3 MONTHS
+list of professors giving this lectures: ['MANOHAR', 'NARAYAN']
+add professor giving this lecture:MADHAV
+['MANOHAR', 'NARAYAN', 'MADHAV']
+Do you want to continue to store lecture information YES or NO:NO
+
+Process finished with exit code 0
+
 
 
 
@@ -168,42 +177,47 @@ class person:
 class student(person):
     pass
 s=student()
-n=int(input("enter number of students:"))
-count=1
-while count<n:
-    count+=1
-    firstname=input("enter first name:",)
-    lastname = input("enter last name:", )
-    age=int(input("enter age:",))
-    s.data(firstname, lastname,age)
-    s.print_name()
+while True:
+    n=input("Do you want to continue to store student information YES or NO:")
+    if n=="YES":
+        firstname=input("enter first name:",)
+        lastname = input("enter last name:", )
+        age=int(input("enter age:",))
+        s.data(firstname, lastname,age)
+        s.print_name()
+    elif n=="NO:
+        break
 class professor(person):
     pass
 p=professor()
-n=int(input("enter number of professors:"))
-count=1
-while count<n:
-    count+=1
-    firstname=input("enter first name:",)
-    lastname = input("enter last name:", )
-    age=int(input("enter age:",))
-    p.data(firstname, lastname,age)
-    p.print_name()
+while True:
+    n=input("Do you want to continue to store professor information YES or NO:")
+    if n=="YES":
+        firstname=input("enter first name:",)
+        lastname = input("enter last name:", )
+        age=int(input("enter age:",))
+        p.data(firstname, lastname,age)
+        p.print_name()
+    elif n=="NO":
+        break
 
 ......OUTPUT.........
-
-enter number of students:2
+Do you want to continue to store student information YES or NO:YES
 enter first name:mordahn
 enter last name:kesav
 enter age:23
 full name: mordahn kesav
 age: 23
-enter number of professors:2
+Do you want to continue to store student information YES or NO:NO
+Do you want to continue to store professor OR information YES or NO:YES
 enter first name:koti
 enter last name:muralimohan
 enter age:54
 full name: koti  muralimohan
 age: 54
+Do you want to continue to store professor information YES or NO: NO
+
+Process finished with exit code 0
 
 ...........AND ANOTHER CODE.....................
 
