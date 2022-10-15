@@ -7,7 +7,7 @@ class student:
         self.a=a
         self.la=la
     def display(self):
-        print("full name:", self.f,"", self.l)
+        print("full name:", self.f,self.l)
         print("student age:", self.a)
         print("lectures he/she attends:", self.la)
         add=list(map(str,input("add new lectures to the lecters list:").split()))
@@ -39,7 +39,7 @@ enter first name:kata
 enter last name:bharath
 enter age:23
 enter lectures:math science
-full name: kata  bharath
+full name: kata bharath
 student age: 23
 lectures he/she attends: ['math', 'science']
 add new lectures to the lecters list:computers telugu
@@ -68,7 +68,7 @@ class professor:
         self.a=a
         self.s=s
     def display(self):
-        print("professor first name:", self.f,"",self.l)
+        print("professor first name:", self.f,self.l)
         print("professor age:", self.a)
         print("subjects he/she attends:", self.s)
         add = list(map(str,input("add new subjects to the subjects list:").split()))
@@ -95,10 +95,10 @@ while count<n:
 .....OUTPUT.....
 enter number of professors:2
 enter first name:mani
-enter last name:m
+enter last name:muta
 enter age:56
 enter subjects he/she teaches:math computers
-professor first name: mani  m
+professor first name: mani muta
 professor age: 56
 subjects he/she attends: ['math', 'computers']
 add new subjects to the subjects list:telugu hindhi
@@ -163,7 +163,7 @@ class person:
         self.last_name=last_name
         self.age=age
     def print_name(self):
-        print("full name:", self.first_name,"",self.last_name)
+        print("full name:", self.first_name,self.last_name)
         print("age:",self.age)
 class student(person):
     pass
@@ -196,7 +196,7 @@ enter number of students:2
 enter first name:mordahn
 enter last name:kesav
 enter age:23
-full name: mordahn  kesav
+full name: mordahn kesav
 age: 23
 enter number of professors:2
 enter first name:koti
