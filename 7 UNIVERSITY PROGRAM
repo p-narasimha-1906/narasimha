@@ -157,13 +157,16 @@ d.INHERITENCE
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 
-class student:
-    def data(self,f,l,a):
-        self.f=f
-        self.l=l
-        self.a=a
+class person:
+    def data(self,first_name,last_name,age):
+        self.first_name=first_name
+        self.last_name=last_name
+        self.age=age
     def print_name(self):
-        print("full name:", self.f,"", self.l)
+        print("full name:", self.first_name,"",self.last_name)
+        print("age:",self.age)
+class student(person):
+    pass
 s=student()
 n=int(input("enter number of students:"))
 count=1
@@ -174,7 +177,7 @@ while count<n:
     age=int(input("enter age:",))
     s.data(firstname, lastname,age)
     s.print_name()
-class professor(student):
+class professor(person):
     pass
 p=professor()
 n=int(input("enter number of professors:"))
@@ -184,19 +187,48 @@ while count<n:
     firstname=input("enter first name:",)
     lastname = input("enter last name:", )
     age=int(input("enter age:",))
-    s.data(firstname, lastname,age)
-    s.print_name()
+    p.data(firstname, lastname,age)
+    p.print_name()
 
 ......OUTPUT.........
 
 enter number of students:2
-enter first name:mani
-enter last name:m
-enter age:32
-full name: mani  m
+enter first name:mordahn
+enter last name:kesav
+enter age:23
+full name: mordahn  kesav
+age: 23
 enter number of professors:2
-enter first name:n
+enter first name:koti
 enter last name:muralimohan
-enter age:49
-full name: n  muralimohan
+enter age:54
+full name: koti  muralimohan
+age: 54
+
+...........AND ANOTHER CODE.....................
+
+class person:
+    first_name=input("enter last_name:",)
+    last_name=input("enter last_name:",)
+    age=int(input("enter age:",))
+    def print_name(self):
+        print("full name:",self.first_name,self.last_name)
+        print("age:",self.age)
+class student(person):
+    pass
+s=student()
+s.print_name()
+class professor(person):
+    pass
+p=professor()
+p.print_name()
+....................................OUTPUT.................
+  enter last_name:mani
+enter last_name:m
+enter age:23
+full name: mani m
+age: 23
+full name: mani m
+age: 23
+
 
