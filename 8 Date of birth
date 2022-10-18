@@ -17,26 +17,37 @@ while True:
             else:
                 return (delta2)
         d=day_count(presentdate)
-        print(d)
-        m=(d-presentdate).days
-        print(m," days to complete to coming my birthday")
-        hours=m*24
-        print(hours,"hours to complete to coming my birthday")
-        minuts=hours*60
-        print(minuts,"minuts to complete to coming my birthday")
+        timedelta=(d-presentdate)
+        z=timedelta.days * 24 * 3600 + timedelta.seconds
+        def seconds(seconds):
+            minutes,seconds=divmod(seconds,60)
+            hours,minutes=divmod(minutes,60)
+            days,hours=divmod(hours,24)
+            return days,hours,minutes,seconds
+        print("\n%d days,%d hours,%d minutes,%d seconds"%seconds(z))
     elif choice=="no":
         break
-
 
 .................OUTPUT....................................
 Do you want to count remaining days to coming your birtday yes or no:yes
 enter your birthday year:2000
-enter your birthday month:6
-enter your birthday date:19
-2023-06-19 00:00:00
-243  days to complete to coming my birthday
-5832 hours to complete to coming my birthday
-349920 minuts to complete to coming my birthday
+enter your birthday month:10
+enter your birthday date:20
+
+1 days,8 hours,49 minutes,51 seconds
+Do you want to count remaining days to coming your birtday yes or no:yes
+enter your birthday year:2000
+enter your birthday month:11
+enter your birthday date:1
+
+13 days,8 hours,49 minutes,29 seconds
+Do you want to count remaining days to coming your birtday yes or no:yes
+enter your birthday year:2000
+enter your birthday month:9
+enter your birthday date:2
+
+318 days,8 hours,48 minutes,58 seconds
 Do you want to count remaining days to coming your birtday yes or no:no
 
 Process finished with exit code 0
+
