@@ -1,0 +1,42 @@
+from datetime import datetime
+while True:
+    choice = input("Do you want to count remaining days to coming your birtday yes or no:")
+    if choice=="yes":
+        YY=int(input("enter your birthday year:",))
+        MM=int(input("enter your birthday month:",))
+        DD=int(input("enter your birthday date:",))
+        presentdate=datetime.now()
+        def day_count(presentdate):
+            birthday=datetime(YY,MM,DD)
+            presentdate=datetime.now()
+            delta1=datetime(presentdate.year,MM,DD)
+            delta2=datetime(presentdate.year+1,MM,DD)
+
+            if (delta1>presentdate):
+                return (delta1)
+            else:
+                return (delta2)
+        d=day_count(presentdate)
+        print(d)
+        m=(d-presentdate).days
+        print(m," days to complete to coming my birthday")
+        hours=m*24
+        print(hours,"hours to complete to coming my birthday")
+        minuts=hours*60
+        print(minuts,"minuts to complete to coming my birthday")
+    elif choice=="no":
+        break
+
+
+.................OUTPUT....................................
+Do you want to count remaining days to coming your birtday yes or no:yes
+enter your birthday year:2000
+enter your birthday month:6
+enter your birthday date:19
+2023-06-19 00:00:00
+243  days to complete to coming my birthday
+5832 hours to complete to coming my birthday
+349920 minuts to complete to coming my birthday
+Do you want to count remaining days to coming your birtday yes or no:no
+
+Process finished with exit code 0
