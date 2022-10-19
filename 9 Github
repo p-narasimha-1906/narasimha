@@ -1,22 +1,29 @@
 import requests
 from pprint import pprint
-username="p-narasimha-1906"
-url=f"https://api.github.com/users/{username}"
-user_data=requests.get(url).json()
-print(user_data)
 import base64
 from github import Github
-username="p-narasimha-1906"
-g=Github()
-user=g.get_user(username)
+username = "p-narasimha-1906"
+g = Github()
+user = g.get_user(username)
 for repo in user.get_repos():
     print(repo)
-    
-    
-    
-    ..........output.......
- {'login': 'p-narasimha-1906', 'id': 111100110, 'node_id': 'U_kgDOBp9Azg', 'avatar_url': 'https://avatars.githubusercontent.com/u/111100110?v=4', 'gravatar_id': '', 'url': 'https://api.github.com/users/p-narasimha-1906', 'html_url': 'https://github.com/p-narasimha-1906', 'followers_url': 'https://api.github.com/users/p-narasimha-1906/followers', 'following_url': 'https://api.github.com/users/p-narasimha-1906/following{/other_user}', 'gists_url': 'https://api.github.com/users/p-narasimha-1906/gists{/gist_id}', 'starred_url': 'https://api.github.com/users/p-narasimha-1906/starred{/owner}{/repo}', 'subscriptions_url': 'https://api.github.com/users/p-narasimha-1906/subscriptions', 'organizations_url': 'https://api.github.com/users/p-narasimha-1906/orgs', 'repos_url': 'https://api.github.com/users/p-narasimha-1906/repos', 'events_url': 'https://api.github.com/users/p-narasimha-1906/events{/privacy}', 'received_events_url': 'https://api.github.com/users/p-narasimha-1906/received_events', 'type': 'User', 'site_admin': False, 'name': None, 'company': None, 'blog': '', 'location': None, 'email': None, 'hireable': None, 'bio': None, 'twitter_username': None, 'public_repos': 2, 'public_gists': 0, 'followers': 0, 'following': 0, 'created_at': '2022-08-12T01:48:25Z', 'updated_at': '2022   
+url =requests.get(f"https://api.github.com/users/{username}/repos")
+m =url.json()
+for i in range(0,len(m)):
+    print("repo number:",i+1)
+    print("repo name:",m[i]['name'])
+    print("repo url:",m[i]['svn_url'],"\n")
 
+
+
+    ..........output.......
 Repository(full_name="p-narasimha-1906/narasimha")
 Repository(full_name="p-narasimha-1906/p-narasimha-1906")
-    
+repo number: 1
+repo name: narasimha
+repo url: https://github.com/p-narasimha-1906/narasimha 
+
+repo number: 2
+repo name: p-narasimha-1906
+repo url: https://github.com/p-narasimha-1906/p-narasimha-1906 
+
