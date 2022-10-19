@@ -1,0 +1,32 @@
+import pandas as pd
+c=pd.read_excel("E:\\narasimhulu.xlsx")
+df=pd.DataFrame(c)
+print(df)
+print()
+print("After sorting a spread sheet:")
+print()
+print(df.sort_values("Years of experience",ascending=False))
+
+
+
+
+............................OUTPUT......................
+
+C:\Users\admin\PycharmProjects\pythonProject2342\venv\Scripts\python.exe C:/Users/admin/PycharmProjects/pythonProject1/sreekanth.py 
+            Name  Years of experience      JobTitle        DOB
+0      MUNIRAJA                     7   Mathematics 1985-01-04
+1         RAMESH                   12    Statistics 1980-01-05
+2        Amrutha                    7     Computers 1986-02-04
+3  Shankar Reddy                   13    Statistics 1979-05-10
+4         Pavani                    5        Python 1990-01-04
+
+After sorting a spread sheet:
+
+            Name  Years of experience      JobTitle        DOB
+3  Shankar Reddy                   13    Statistics 1979-05-10
+1         RAMESH                   12    Statistics 1980-01-05
+0      MUNIRAJA                     7   Mathematics 1985-01-04
+2        Amrutha                    7     Computers 1986-02-04
+4         Pavani                    5        Python 1990-01-04
+
+Process finished with exit code 0
