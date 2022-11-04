@@ -1,0 +1,134 @@
+data = [float(x.rstrip()) for x in open('C:\\Users\\admin\\Downloads\\bala.txt','r')]
+k=int(input("enter number of clusters:",))
+centroids = dict(zip(range(k),data[0:k]))
+def hello():
+    global rlist
+    rlist=[(0) for i in range(k)]
+    global centroids
+    global clusters
+    clusters = dict(zip(range(k), [[] for i in range(k)]))
+    for i in range(len(data)):
+        p=[((abs(centroids[j]-data[i]))) for j in range(len(centroids))]
+        u=min(p)
+        for j in range(len(p)):
+            if u==p[j]:
+                clusters[j].append(data[i])
+                break
+    for i in clusters:
+        m=sum(clusters[i])
+        mean=m/len(clusters[i])
+        rlist[int(i)]=mean
+    for i in range(len(clusters)):
+        print(i,clusters[i])
+iteration=0
+while True:
+    iteration=iteration+1
+    print("Iteration ",iteration)
+    hello()
+    t=True
+    for i in range(k):
+        if centroids[i]==rlist[i]:
+            pass
+        else:
+            t=False
+    if t==True:
+        break
+    else:
+        for i in range(k):
+            centroids[i]=rlist[i]
+print()
+for i in data:
+    for j in range(len(clusters)):
+        if i in clusters[j]:
+            print("Point",i,"in cluster", j)
+
+
+
+++++++++==========output+++++++++++++============
+enter number of clusters:5
+Iteration  1
+0 [1.8]
+1 [4.5, 6.5]
+2 [1.1, 0.5]
+3 [2.1, 3.2]
+4 [9.8, 7.6, 11.32]
+Iteration  2
+0 [1.8, 2.1]
+1 [4.5, 6.5]
+2 [1.1, 0.5]
+3 [3.2]
+4 [9.8, 7.6, 11.32]
+Iteration  3
+0 [1.8, 2.1]
+1 [4.5, 6.5]
+2 [1.1, 0.5]
+3 [3.2]
+4 [9.8, 7.6, 11.32]
+
+Point 1.8 in cluster 0
+Point 4.5 in cluster 1
+Point 1.1 in cluster 2
+Point 2.1 in cluster 0
+Point 9.8 in cluster 4
+Point 7.6 in cluster 4
+Point 11.32 in cluster 4
+Point 3.2 in cluster 3
+Point 0.5 in cluster 2
+Point 6.5 in cluster 1
+
+Process finished with exit code 0
+
+NNNNNNNNNNNNNNNNNNNNN  ANOTHER CODE   NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+
+-----BY USING CLASSES------
+
+class kmeans:
+    data= [float(x.rstrip()) for x in open('C:\\Users\\admin\\Downloads\\bala.txt', 'r')]
+    k=int(input("enter number of clusters:",))
+    centroids = dict(zip(range(k), data[0:k]))
+    def hello(self):
+        global rlist
+        global centroids
+        rlist=[(0) for i in range(a.k)]
+        global list
+        global clusters
+        clusters = dict(zip(range(a.k), [[] for i in range(a.k)]))
+        for i in range(len(a.data)):
+            p=[((abs(a.centroids[j]-a.data[i]))) for j in range(len(a.centroids))]
+            u=min(p)
+            for k in range(len(p)):
+                if u==p[k]:
+                    clusters[k].append(a.data[i])
+                    break
+        for i in clusters:
+            m=sum(clusters[i])
+            mean=m/len(clusters[i])
+            rlist[int(i)]=mean
+        for i in range(len(clusters)):
+            print(i,clusters[i])
+iteration=0
+while True:
+    iteration=iteration+1
+    print("Iteration ",iteration)
+    a=kmeans()
+    a.hello()
+    t=True
+    for i in range(a.k):
+        if a.centroids[i]==rlist[i]:
+            pass
+        else:
+            t=False
+    if t==True:
+        break
+    else:
+        for i in range(a.k):
+            a.centroids[i] = rlist[i]
+print()
+for i in a.data:
+    for j in range(len(clusters)):
+        if i in clusters[j]:
+            print("Point",i,"in cluster", j)
+
+
+
+
